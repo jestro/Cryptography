@@ -20,14 +20,12 @@ def roman_encode(plaintext, shift):
     plaintext = plaintext.upper()
     cipher = ""
 
-    print("\nEncode: ")
-
     if shift == 0:
-        print(plaintext)
+        return plaintext
     else:
         for char in plaintext:
             if char == " ":
                 cipher += " "
             else:
                 cipher += cipher_alphabet[PLAIN_ALPHABET.index(char)]
-        print(cipher)
+        return cipher

@@ -25,8 +25,6 @@ def get_cipher_alphabets():
 def roman_decode(cipher):
     cipher = cipher.upper()
 
-    print("\nCipher: ")
-
     for cipher_alphabet in get_cipher_alphabets():
         plaintext = ""
 
