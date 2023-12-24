@@ -1,5 +1,9 @@
 message: HELLO
-ascii bytes: [72, 69, 76, 76, 79]
+
+ascii/decimal bytes: [72, 69, 76, 76, 79]
 hex bytes: [0x48, 0x45, 0x4c, 0x4c, 0x4f]
+bin bytes: [0b1001000, 0b1000101, 0b1001100, 0b1001100, 0b1001111]
+
 base-16: 0x48454c4c4f
 base-10: 310400273487
+base-2: 1001000010001010110011001001100010011111
