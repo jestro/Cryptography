@@ -1,3 +1,4 @@
+# cry -> [99, 114, 121]
 def ascii_encode(plaintext):
     ascii_list = []
 
