@@ -1,8 +1,5 @@
-from Encoding.ASCII.ASCII_encode import ascii_encode
-
-
 # "637279" -> b'cry' (bytes)
-def hex_decode_plaintext(hexstring):
+def hex_decode_plaintext_bytes(hexstring):
     return bytes.fromhex(hexstring)
 
 
