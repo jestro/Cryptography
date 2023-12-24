@@ -8,8 +8,8 @@ def bin_to_int(bin_list):
 
     int_list = []
 
-    for binary_char in bin_list:
-        int_list.append(int(binary_char, 2))
+    for binary in bin_list:
+        int_list.append(int(binary, 2))
 
     return int_list
 
@@ -22,8 +22,8 @@ def bin_to_chr(bin_list):
 
     plaintext = ""
 
-    for binary_char in bin_list:
-        plaintext += chr(int(binary_char, 2))
+    for binary in bin_list:
+        plaintext += chr(int(binary, 2))
 
     return plaintext
 
@@ -35,7 +35,7 @@ def bin_to_hex(bin_list):
 
     hex_list = []
 
-    for binary_char in bin_list:
-        hex_list.append(hex(int(binary_char, 2)))
+    for binary in bin_list:
+        hex_list.append(hex(int(binary, 2)))
 
     return hex_list
