@@ -1,17 +1,40 @@
-# "637279" -> b'cry' (bytes)
-def hex_decode_plaintext_bytes(hexstring):
-    return bytes.fromhex(hexstring)
+# ['0x63', '0x72', '0x79'] -> [99, 114, 121]
+# '0x63' -> 99
+def hex_decode_number(hex_list):
+    if isinstance(hex_list, str):
+        return int(hex_list, 16)
+
+    ascii_list = []
+
+    for hex_char in hex_list:
+        ascii_list.append(int(hex_char, 16))
+
+    return ascii_list
 
 
-# "637279" -> 6517369
-def hex_decode_number(hexstring):
-    hex_values = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "A", "B", "C", "D", "E", "F"]
-    hex_eq = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
-    hexstring = hexstring.upper()
+# ['0x63', '0x72', '0x79'] -> [99, 114, 121] -> 'cry'
+# '0x63' -> 99 -> 'c'
+def hex_decode_plaintext(hex_list):
+    if isinstance(hex_list, str):
+        return chr(int(hex_list, 16))
 
-    number = 0
+    plain_text = ""
 
-    for index in range(0, len(hexstring)):
-        last_index = len(hexstring) - 1
-        number += hex_eq[hex_values.index(hexstring[index])] * pow(16, last_index - index)
-    return number
+    for hex_char in hex_list:
+        plain_text += chr(int(hex_char, 16))
+
+    return plain_text
+
+
+# ['0x63', '0x72', '0x79'] -> [99, 114, 121] -> ['0b1100011', '0b1110010', '0b1111001']
+# '0x63' -> 99 -> '0b1100011'
+def hex_decode_binary(hex_list):
+    if isinstance(hex_list, str):
+        return bin(int(hex_list, 16))
+
+    binary_list = []
+
+    for hex_char in hex_list:
+        binary_list.append(bin(int(hex_char, 16)))
+
+    return binary_list
