@@ -1,18 +1,14 @@
-# cry -> ['0b1100011', '0b1110010', '0b1111001']
-def binary_encode_plaintext(plaintext):
-    binary_list = []
+# list or singular item
+# format -> c or cry
 
-    for plaintext_char in plaintext:
-        binary_list.append(bin(ord(plaintext_char)))
+# plaintext -> decimal -> binary
+def chr_to_bin(plaintext):
+    if len(plaintext) == 1:
+        return bin(ord(plaintext))
 
-    return binary_list
+    bin_list = []
 
+    for char in plaintext:
+        bin_list.append(bin(ord(char)))
 
-# [0x63, 0x72, 0x79] -> ['0b1100011', '0b1110010', '0b1111001']
-def binary_encode_hex(hex_list):
-    binary_list = []
-
-    for hex_char in hex_list:
-        binary_list.append(bin(hex_char))
-
-    return binary_list
+    return bin_list
