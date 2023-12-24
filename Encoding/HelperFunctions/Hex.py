@@ -9,8 +9,8 @@ def merge_hex_array(hexarray):
 
 
 # "0x63" -> "63"
-def remove_0x(hexstring):
-    if hexstring[:2] == "0x":
-        hexstring = hexstring[2:]
+def remove_0x(hexadecimal):
+    if hexadecimal[:2] == "0x":
+        hexadecimal = hexadecimal[2:]
 
-    return hexstring
+    return hexadecimal
