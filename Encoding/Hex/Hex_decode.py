@@ -1,6 +1,8 @@
-# ['0x63', '0x72', '0x79'] -> [99, 114, 121]
-# '0x63' -> 99
-def hex_decode_number(hex_list):
+# list or singular item
+# format -> '0x63' or ['0x63', ...]
+
+# hex -> decimal
+def hex_decode_decimal(hex_list):
     if isinstance(hex_list, str):
         return int(hex_list, 16)
 
@@ -12,8 +14,8 @@ def hex_decode_number(hex_list):
     return ascii_list
 
 
-# ['0x63', '0x72', '0x79'] -> [99, 114, 121] -> 'cry'
-# '0x63' -> 99 -> 'c'
+# Only possible if the hex items' decimal values are ASCII
+# hex -> decimal -> plaintext
 def hex_decode_plaintext(hex_list):
     if isinstance(hex_list, str):
         return chr(int(hex_list, 16))
@@ -26,8 +28,7 @@ def hex_decode_plaintext(hex_list):
     return plain_text
 
 
-# ['0x63', '0x72', '0x79'] -> [99, 114, 121] -> ['0b1100011', '0b1110010', '0b1111001']
-# '0x63' -> 99 -> '0b1100011'
+# hex -> decimal -> binary
 def hex_decode_binary(hex_list):
     if isinstance(hex_list, str):
         return bin(int(hex_list, 16))
