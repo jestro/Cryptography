@@ -22,7 +22,7 @@ def get_cipher_alphabets():
     return cipher_alphabets
 
 
-def roman_decode(cipher):
+def roman_decrypt(cipher):
     cipher = cipher.upper()
 
     for cipher_alphabet in get_cipher_alphabets():

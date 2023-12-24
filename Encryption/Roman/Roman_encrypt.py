@@ -14,7 +14,7 @@ def get_cipher_alphabet(shift):
     return cipher_alphabet
 
 
-def roman_encode(plaintext, shift):
+def roman_encrypt(plaintext, shift):
     cipher_alphabet = get_cipher_alphabet(shift)
 
     plaintext = plaintext.upper()
