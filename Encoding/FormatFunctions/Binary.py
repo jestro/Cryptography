@@ -14,3 +14,12 @@ def remove_0b(binary):
         binary = binary[2:]
 
     return binary
+
+
+def format_bin_8bit(binary):
+    binary = remove_0b(binary)
+
+    if len(binary) < 7:
+        binary = "0" * (7 - len(binary)) + binary[0:len(binary)]
+
+    return binary
