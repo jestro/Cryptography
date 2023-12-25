@@ -3,3 +3,9 @@ https://en.wikipedia.org/wiki/XOR_cipher
 Aside from this you can use a key of any size as long as it is
 1. repeating
 2. a divisor of the length of the message
+
+Key can be
+1. a char
+2. a number
+3. a list of numbers
+4. a string
