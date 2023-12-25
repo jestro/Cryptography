@@ -1,5 +1,8 @@
+from HelperFunctions.string_manip import split
+
 # list or singular item
 # format -> '0x63' or ['0x63', ...]
+
 
 # hex -> decimal
 def hex_to_int(hex_list):
@@ -17,8 +20,9 @@ def hex_to_int(hex_list):
 # Only possible if the hex items' decimal values are ASCII
 # hex -> decimal -> plaintext
 def hex_to_chr(hex_list):
+    # All visible ASCII characters are in the range 32-126 (2 hex digits)
     if isinstance(hex_list, str):
-        return chr(int(hex_list, 16))
+        hex_list = split(hex_list, 2)
 
     plaintext = ""
 
