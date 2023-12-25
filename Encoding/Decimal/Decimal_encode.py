@@ -12,4 +12,3 @@ def chr_to_int(plaintext):
         int_list.append(ord(char))
 
     return int_list
-
