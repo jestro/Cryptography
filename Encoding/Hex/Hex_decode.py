@@ -20,7 +20,7 @@ def hex_to_int(hex_list):
 # Only possible if the hex items' decimal values are ASCII
 # hex -> decimal -> plaintext
 def hex_to_chr(hex_list):
-    # All visible ASCII characters are in the range 32-126 (2 hex digits)
+    # All visible ASCII characters are 2 hex digits (for hex strings)
     if isinstance(hex_list, str):
         hex_list = split(hex_list, 2)
 
