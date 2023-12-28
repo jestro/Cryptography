@@ -10,3 +10,7 @@ def split(string, split_amount):
         splitted_string.append(substring(string, index, index + split_amount))
 
     return splitted_string
+
+
+def is_string(string):
+    return isinstance(string, str)
