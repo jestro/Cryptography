@@ -1,7 +1,7 @@
 # list or singular item
 # format -> c or cry
 
-# plaintext -> decimal -> hex
+# plaintext -> ASCII -> hex
 def chr_to_hex(plaintext):
     if len(plaintext) == 1:
         return hex(ord(plaintext))

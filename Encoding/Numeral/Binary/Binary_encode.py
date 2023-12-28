@@ -1,7 +1,7 @@
 # list or singular item
 # format -> c or cry
 
-# plaintext -> decimal -> binary
+# plaintext -> ASCII -> binary
 def chr_to_bin(plaintext):
     if len(plaintext) == 1:
         return bin(ord(plaintext))
