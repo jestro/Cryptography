@@ -1,11 +1,18 @@
 https://en.wikipedia.org/wiki/XOR_cipher
 
-Aside from this you can use a key of any size as long as it is
-1. repeating
-2. a divisor of the length of the message
+You can use the xor_cipher(data, key, codetype) function to encrypt and decrypt.
+The codetype is an argument to change the output.
+Codetype options:
+- plaintext -> "str"
+- hex list -> "hex"
+- binary list -> "bin"
 
-Key can be
-1. a char
-2. a number
-3. a list of numbers
-4. a string
+You can use a key of any size as long as it is:
+- a divisor of the length of the message
+
+Key / message can be:
+- a char
+- a string
+- a number (lists included)
+- a hex (lists included)
+- a binary (lists included)
