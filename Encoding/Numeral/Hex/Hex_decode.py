@@ -1,4 +1,4 @@
-from HelperFunctions.string_manip import split
+from HelperFunctionsGlobal.string_manip import split
 
 # list or singular item
 # format -> '0x63' or ['0x63', ...]
