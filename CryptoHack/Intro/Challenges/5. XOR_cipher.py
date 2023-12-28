@@ -1,6 +1,6 @@
-from Encryption.XOR.XOR_decrypt import xor_decrypt
+from Encryption.XOR.XOR_cipher import xor_cipher
 
 plaintext = "label"
 key = 13
 
-print("crypto{" + xor_decrypt(plaintext, key) + "}")
+print("crypto{" + xor_cipher(plaintext, key, "str") + "}")
