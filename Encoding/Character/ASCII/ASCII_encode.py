@@ -1,6 +1,6 @@
-from Encoding.FormatFunctions.Binary import remove_0b
-from Encoding.FormatFunctions.Hex import remove_0x
-from HelperFunctions.string_manip import split
+from Encoding.HelperFunctionsEnc.Binary import remove_0b
+from Encoding.HelperFunctionsEnc.Hex import remove_0x
+from HelperFunctionsGlobal.string_manip import split
 
 
 # plaintext -> ASCII (if singular) / ASCII list
