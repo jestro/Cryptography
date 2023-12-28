@@ -1,7 +1,6 @@
-# Only possible if decimals are ASCII
-# decimal -> plaintext
-def ascii_array_to_chr(ascii_list):
-    if isinstance(ascii_list, int):
+# ASCII (if singular) / ASCII list -> plaintext
+def ascii_list_to_chr(ascii_list):
+    if not isinstance(ascii_list, list):
         return chr(ascii_list)
     else:
         plaintext = ""
