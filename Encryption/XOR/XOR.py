@@ -13,12 +13,16 @@ def xor(data, key):
 
         xor_binary = ""
 
-        for number in range(len(binary)):
-            if binary[number] == key[number]:
-                xor_binary += "0"
-            else:
-                xor_binary += "1"
+        for bit_index in range(len(binary)):
+            xor_binary += xor_gate(binary[bit_index], key[bit_index])
 
         xor_bin_list.append(xor_binary)
 
     return xor_bin_list
+
+
+def xor_gate(bit1, bit2):
+    if bit1 == bit2:
+        return "0"
+    else:
+        return "1"
