@@ -14,3 +14,9 @@ def remove_0x(hexadecimal):
         hexadecimal = hexadecimal[2:]
 
     return hexadecimal
+
+
+# "0xA" -> True
+# "A" -> False
+def is_hex(hexadecimal):
+    return hexadecimal[:2] == "0x"
