@@ -1,0 +1,10 @@
+Hex:
+- Option to convert to hex string or hex list (use merge)
+
+Binary:
+- Option to convert to binary string or binary list (use merge)
+
+XOR:
+1. Do the things above
+2. Change data_to_bin7b to change into binary string
+3. Change xor() to concatenate the key to itself until it is the same length as the data (remove the outer loop)
