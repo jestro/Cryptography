@@ -16,10 +16,17 @@ def remove_0b(binary):
     return binary
 
 
-def format_bin_8bit(binary):
+# '00011' -> '0000011' (bits = 7)
+def format_bin(binary, bits):
     binary = remove_0b(binary)
 
-    if len(binary) < 7:
-        binary = "0" * (7 - len(binary)) + binary[0:len(binary)]
+    if len(binary) < bits:
+        binary = "0" * (bits - len(binary)) + binary[0:len(binary)]
 
     return binary
+
+
+# '0b1100011' -> True
+# '1100011' -> False
+def is_bin(binary):
+    return binary[:2] == "0b"
