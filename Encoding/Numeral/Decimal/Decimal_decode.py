@@ -1,7 +1,11 @@
+from Encoding.Numeral.Hex.Hex_decode import hex_to_chr
+
 # list or singular item
 # format -> 99 or [99, ...]
 
+
 # decimal -> hex
+# Will leave 0x in front of hexcode!
 def int_to_hex(int_list):
     if isinstance(int_list, int):
         return hex(int_list)
@@ -14,21 +18,8 @@ def int_to_hex(int_list):
         return hex_list
 
 
-# Only possible if decimals are ASCII
-# decimal -> plaintext
-def int_to_chr(int_list):
-    if isinstance(int_list, int):
-        return chr(int_list)
-    else:
-        plaintext = ""
-
-        for integer in int_list:
-            plaintext += chr(integer)
-
-        return plaintext
-
-
 # decimal -> binary
+# Will leave 0b in front of binary!
 def int_to_bin(int_list):
     if isinstance(int_list, int):
         return bin(int_list)
@@ -39,3 +30,10 @@ def int_to_bin(int_list):
             bin_list.append(bin(integer))
 
         return bin_list
+
+
+# decimal -> hex -> plaintext
+def int_to_chr(integer):
+    hexcode = int_to_hex(integer)[2:]
+
+    return hex_to_chr(hexcode)
