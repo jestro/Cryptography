@@ -1,4 +1,4 @@
-from HelperFunctions.string_manip import split
+from HelperFunctionsGlobal.string_manip import split
 
 # list or singular item
 # format -> '0b1100011' or ['0b1100011', ...]
@@ -17,7 +17,7 @@ def bin_to_int(bin_list):
     return int_list
 
 
-# Only possible if the binary items are Decimal
+# Only possible if the binary items are ASCII
 # binary -> decimal -> plaintext
 def bin_to_chr(bin_list):
     # All ASCII characters are 7 bits long (for binary strings)
